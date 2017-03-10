@@ -1,0 +1,393 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22E82FDE82AE8D74CCFB6580 /* Pods_SuperChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9833E7E2F5687A1FCB9A286 /* Pods_SuperChat.framework */; };
+		D21F71711E73319900CA5652 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21F71701E73319900CA5652 /* AppDelegate.swift */; };
+		D21F71731E73319900CA5652 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21F71721E73319900CA5652 /* ChatViewController.swift */; };
+		D21F71761E73319900CA5652 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D21F71741E73319900CA5652 /* Main.storyboard */; };
+		D21F71781E73319900CA5652 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D21F71771E73319900CA5652 /* Assets.xcassets */; };
+		D21F717B1E73319900CA5652 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D21F71791E73319900CA5652 /* LaunchScreen.storyboard */; };
+		D24EA4751E73357400E41ECC /* ChatClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24EA4741E73357400E41ECC /* ChatClient.swift */; };
+		D24EA4791E73359300E41ECC /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24EA4781E73359300E41ECC /* ChatMessage.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D21F716D1E73319900CA5652 /* SuperChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D21F71701E73319900CA5652 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D21F71721E73319900CA5652 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		D21F71751E73319900CA5652 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D21F71771E73319900CA5652 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D21F717A1E73319900CA5652 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D21F717C1E73319900CA5652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D24EA4741E73357400E41ECC /* ChatClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatClient.swift; sourceTree = "<group>"; };
+		D24EA4781E73359300E41ECC /* ChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		F9833E7E2F5687A1FCB9A286 /* Pods_SuperChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB58AA94990EBD2F0773AC24 /* Pods-SuperChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperChat/Pods-SuperChat.debug.xcconfig"; sourceTree = "<group>"; };
+		FEA81D7133AD7F5E93197DE5 /* Pods-SuperChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperChat/Pods-SuperChat.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D21F716A1E73319800CA5652 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22E82FDE82AE8D74CCFB6580 /* Pods_SuperChat.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		31A034BF2EFB1DB8182792E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB58AA94990EBD2F0773AC24 /* Pods-SuperChat.debug.xcconfig */,
+				FEA81D7133AD7F5E93197DE5 /* Pods-SuperChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4D96F00EC3D6C43B7961E7CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9833E7E2F5687A1FCB9A286 /* Pods_SuperChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D21F71641E73319800CA5652 = {
+			isa = PBXGroup;
+			children = (
+				D21F716F1E73319900CA5652 /* SuperChat */,
+				D21F716E1E73319900CA5652 /* Products */,
+				31A034BF2EFB1DB8182792E0 /* Pods */,
+				4D96F00EC3D6C43B7961E7CF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D21F716E1E73319900CA5652 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D21F716D1E73319900CA5652 /* SuperChat.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D21F716F1E73319900CA5652 /* SuperChat */ = {
+			isa = PBXGroup;
+			children = (
+				D21F71701E73319900CA5652 /* AppDelegate.swift */,
+				D21F71721E73319900CA5652 /* ChatViewController.swift */,
+				D21F71741E73319900CA5652 /* Main.storyboard */,
+				D21F71771E73319900CA5652 /* Assets.xcassets */,
+				D21F71791E73319900CA5652 /* LaunchScreen.storyboard */,
+				D21F717C1E73319900CA5652 /* Info.plist */,
+				D24EA4741E73357400E41ECC /* ChatClient.swift */,
+				D24EA4781E73359300E41ECC /* ChatMessage.swift */,
+			);
+			path = SuperChat;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D21F716C1E73319800CA5652 /* SuperChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D21F717F1E73319900CA5652 /* Build configuration list for PBXNativeTarget "SuperChat" */;
+			buildPhases = (
+				642D5447F78183892DDEABBA /* [CP] Check Pods Manifest.lock */,
+				D21F71691E73319800CA5652 /* Sources */,
+				D21F716A1E73319800CA5652 /* Frameworks */,
+				D21F716B1E73319800CA5652 /* Resources */,
+				57ABEAAA230BB552DE999CA9 /* [CP] Embed Pods Frameworks */,
+				69465F3333B4D67AC8295C73 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SuperChat;
+			productName = SuperChat;
+			productReference = D21F716D1E73319900CA5652 /* SuperChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D21F71651E73319800CA5652 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Scott R. Jones";
+				TargetAttributes = {
+					D21F716C1E73319800CA5652 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = KF453768SJ;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D21F71681E73319800CA5652 /* Build configuration list for PBXProject "SuperChat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D21F71641E73319800CA5652;
+			productRefGroup = D21F716E1E73319900CA5652 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D21F716C1E73319800CA5652 /* SuperChat */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D21F716B1E73319800CA5652 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D21F717B1E73319900CA5652 /* LaunchScreen.storyboard in Resources */,
+				D21F71781E73319900CA5652 /* Assets.xcassets in Resources */,
+				D21F71761E73319900CA5652 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		57ABEAAA230BB552DE999CA9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SuperChat/Pods-SuperChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		642D5447F78183892DDEABBA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		69465F3333B4D67AC8295C73 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SuperChat/Pods-SuperChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D21F71691E73319800CA5652 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D21F71731E73319900CA5652 /* ChatViewController.swift in Sources */,
+				D24EA4791E73359300E41ECC /* ChatMessage.swift in Sources */,
+				D24EA4751E73357400E41ECC /* ChatClient.swift in Sources */,
+				D21F71711E73319900CA5652 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D21F71741E73319900CA5652 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D21F71751E73319900CA5652 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D21F71791E73319900CA5652 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D21F717A1E73319900CA5652 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D21F717D1E73319900CA5652 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D21F717E1E73319900CA5652 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D21F71801E73319900CA5652 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB58AA94990EBD2F0773AC24 /* Pods-SuperChat.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KF453768SJ;
+				INFOPLIST_FILE = SuperChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.angryelement.SuperChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D21F71811E73319900CA5652 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEA81D7133AD7F5E93197DE5 /* Pods-SuperChat.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KF453768SJ;
+				INFOPLIST_FILE = SuperChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.angryelement.SuperChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D21F71681E73319800CA5652 /* Build configuration list for PBXProject "SuperChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D21F717D1E73319900CA5652 /* Debug */,
+				D21F717E1E73319900CA5652 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D21F717F1E73319900CA5652 /* Build configuration list for PBXNativeTarget "SuperChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D21F71801E73319900CA5652 /* Debug */,
+				D21F71811E73319900CA5652 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D21F71651E73319800CA5652 /* Project object */;
+}
