@@ -23,7 +23,7 @@ class ChatClient {
     
     func sendMessage(chatMessage: ChatMessage) -> ChatSendMessageResult {
         //TODO stubbed
-        return ChatSendMessageResult.failure(UserErrorInfo(message: "Bad", title: "Really Bad"))
+        return ChatSendMessageResult.success
     }
     
     func getMessages() -> [ChatMessage] {

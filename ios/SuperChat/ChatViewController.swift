@@ -45,8 +45,6 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     
     //handle the event that says "the user is done with the text box" by pressing Return etc..
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        //make the text box lose focus
-        ChatEntryText.resignFirstResponder()
         
         //if the user didn't enter anything and hits enter then just lose focus but don't send a message.
         guard let text = ChatEntryText.text else {
@@ -60,9 +58,14 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         case let .failure(errorInfo):
             //show error message
             self.showAlert(withTitle: errorInfo.title, withMessage: errorInfo.message)
+            return false //maintain focus so the user can try again
         default:
             break //good, don't worry about it
         }
+        
+        //make the text box lose focus
+        ChatEntryText.resignFirstResponder()
+        ChatEntryText.text = nil
         
         return true
     }
