@@ -70,8 +70,6 @@ class ChatClient {
                     
                     let json = JSON(data)
                     
-                    let c = json.count
-                    
                     var messages = [ChatMessage]()
                                         
                     json.array!.forEach {
@@ -83,7 +81,7 @@ class ChatClient {
                 case .failure(_):
                     //NOTE: In a real app I'd log the error message and show something nice to the user in their language.
                     //here I'm just ignoring the error and showing a basic error message
-                    callback(ChatClientResult.failure(UserErrorInfo.init(message: "Failed to get chat messages", title: "Error")), nil)
+                    callback(ChatClientResult.failure(UserErrorInfo(message: "Failed to get chat messages", title: "Error")), nil)
                 }
         }
     }
