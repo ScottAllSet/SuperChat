@@ -11,21 +11,4 @@ import UIKit
 class ChatMessageStore {
     //the array of chat messages that are displayed in the table
     var allItems = [ChatMessage]()
-    
-    init() {
-        
-        allItems.append(ChatMessage("stuff"))
-        allItems.append(ChatMessage("stuff"))
-        allItems.append(ChatMessage("stuff"))
-        allItems.append(ChatMessage("stuff"))
-        allItems.append(ChatMessage("stuff"))
-        allItems.append(ChatMessage("stuff"))
-        allItems.append(ChatMessage("stuff"))
-        allItems.append(ChatMessage("stuff"))
-        allItems.append(ChatMessage("stuff"))
-        allItems.append(ChatMessage("stuff"))
-        allItems.append(ChatMessage("stuff"))
-        allItems.append(ChatMessage("stuff"))
-        allItems.append(ChatMessage("stuff"))
-    }
 }

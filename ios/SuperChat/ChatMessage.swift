@@ -8,6 +8,7 @@
 
 import Foundation
 
+//the ChatMessage model object
 class ChatMessage {
     let text: String
     let timestamp: Date
@@ -15,5 +16,10 @@ class ChatMessage {
     init(_ text: String) {
         self.text = text
         self.timestamp = Date()
+    }
+    
+    init(text: String, timestamp: Date) {
+        self.text = text
+        self.timestamp = timestamp
     }
 }

@@ -16,15 +16,32 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     //reference to the class that handles client/server communication
     let chatClient = ChatClient()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    //MARK: chat message table handling
+    //reference to a Timer instance used to refresh the chat messages in the table
+    var getMessagesTimer: Timer? = nil
     
     //declaring the store using ! means that it's an implicitly unwrapped optional.
     //that is, it's optional but you don't need to access it using ? when you deref.
     var chatMessageStore: ChatMessageStore!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //do an initial get of the messages so it doesn't need to wait for the timer to fire
+        self.getMessages()
+        
+        //setup the timer to refresh the messages every two seconds
+        self.getMessagesTimer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true, block: {
+            _ in
+            self.getMessages()
+        })
+    }
+    
+    //this helps the keyboard show up when you touch the chat entry text
+    override func viewWillDisappear(_ animated: Bool) {
+        self.resignFirstResponder()
+    }
+    
+    //MARK: chat message table handling
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return the number of chat messages
@@ -58,26 +75,32 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     //handle the event that says "the user is done with the text box" by pressing Return etc..
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        //if the user didn't enter anything and hits enter then just lose focus but don't send a message.
-        guard let text = self.chatEntryText.text else {
+        //if the user didn't enter anything and hits enter then ignore
+        guard let text = self.chatEntryText.text, text != "" else {
             return true
         }
         
         //actually send the message to the API
-        let response = self.chatClient.sendMessage(chatMessage: ChatMessage(text))
-        
-        switch response {
-        case let .failure(errorInfo):
-            //show error message
-            self.showAlert(withTitle: errorInfo.title, withMessage: errorInfo.message)
-            return false //maintain focus so the user can try again
-        default:
-            break //good, don't worry about it
+        self.chatClient.sendMessage(chatMessage: ChatMessage(text)) {
+            response in
+            
+            switch response {
+            case let .failure(errorInfo):
+                //show error message
+                self.showAlert(withTitle: errorInfo.title, withMessage: errorInfo.message)
+            default:
+                break //good, don't worry about it
+            }
+            
+            //reset the text box so we can continue sending messages
+            self.chatEntryText.text = nil
+            
+            //refresh the displayed messages
+            self.getMessages()
         }
         
-        //make the text box lose focus
-        self.chatEntryText.resignFirstResponder()
-        self.chatEntryText.text = nil
+        //note: this isn't optimal as the textField will always return.
+        //in a real app I would make that determined based on the success status of the send.
         
         return true
     }
@@ -103,6 +126,45 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         
         //actually show the alert box
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    private func getMessages() {
+        self.chatClient.getMessages(callback: {
+            result, messages in
+            switch result {
+            case .success:
+                
+                //(very) redumentary check to see if there's any new items.
+                //in a real application I'd need to do more work here as new items could be deleted
+                //this prevents the chat text from scrolling back to the bottom if the user has scrolled manually
+                //however, if new messages show up, it'll scroll to the bottom.
+                if messages!.count == self.chatMessageStore.allItems.count {
+                    return
+                }
+                
+                //since we successfully got messages
+                
+                //clear the chat messages from the store
+                self.chatMessageStore.allItems.removeAll()
+                
+                //add them and sort by their timestamp
+                self.chatMessageStore.allItems.append(contentsOf: messages!.sorted(by: {
+                    left, right in
+                    left.timestamp < right.timestamp
+                }))
+                
+                //refresh the table on the UI thread
+                DispatchQueue.main.async {
+                    self.chatTable.reloadData()
+                    
+                    //scroll the table to the bottom to show the last message
+                    self.chatTable.scrollToRow(at: IndexPath(row: self.chatMessageStore.allItems.count - 1, section: 0), at: UITableViewScrollPosition.bottom, animated: false)
+                }
+            case let .failure(error):
+                //show the user the error message
+                self.showAlert(withTitle: error.title, withMessage: error.message)
+            }
+        })
     }
 }
 

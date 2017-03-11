@@ -1,4 +1,5 @@
 use_frameworks!
 target 'SuperChat' do
 	pod 'Alamofire'
+    pod 'SwiftyJSON'
 end

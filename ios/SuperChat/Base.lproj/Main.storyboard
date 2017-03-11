@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,9 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type to chat and press &quot;Enter&quot;" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YVl-uS-IA1">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type to chat and press &quot;Enter&quot;" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YVl-uS-IA1">
                                 <rect key="frame" x="16" y="629" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -31,27 +31,52 @@
                                     <outlet property="delegate" destination="Ski-zJ-QGH" id="brb-VP-NdD"/>
                                 </connections>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="faV-h3-UyX">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9Dn-f9-Lua">
                                 <rect key="frame" x="16" y="28" width="343" height="593"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChatMessageCell" id="ADa-dz-GvE">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ADa-dz-GvE" id="szf-uB-Dxb">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="Ski-zJ-QGH" id="Y3D-ba-uDF"/>
-                                    <outlet property="delegate" destination="Ski-zJ-QGH" id="DPc-fh-K6y"/>
-                                </connections>
-                            </tableView>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BgR-Fi-u23">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="593"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cAf-Gh-M4T">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="593"/>
+                                                <subviews>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="faV-h3-UyX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="593"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="593" id="E82-V4-LhQ"/>
+                                                        </constraints>
+                                                        <prototypes>
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChatMessageCell" id="ADa-dz-GvE">
+                                                                <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ADa-dz-GvE" id="szf-uB-Dxb">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                </tableViewCellContentView>
+                                                            </tableViewCell>
+                                                        </prototypes>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="Ski-zJ-QGH" id="Y3D-ba-uDF"/>
+                                                            <outlet property="delegate" destination="Ski-zJ-QGH" id="DPc-fh-K6y"/>
+                                                        </connections>
+                                                    </tableView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Dn-f9-Lua" firstAttribute="leading" secondItem="YVl-uS-IA1" secondAttribute="leading" id="2if-4O-ysH"/>
+                            <constraint firstItem="9Dn-f9-Lua" firstAttribute="trailing" secondItem="YVl-uS-IA1" secondAttribute="trailing" id="5A3-8e-VNG"/>
+                            <constraint firstItem="9Dn-f9-Lua" firstAttribute="trailing" secondItem="Me7-rL-PKj" secondAttribute="trailingMargin" id="aqR-wn-RfS"/>
+                            <constraint firstItem="YVl-uS-IA1" firstAttribute="top" secondItem="9Dn-f9-Lua" secondAttribute="bottom" constant="8" symbolic="YES" id="f3E-V7-n12"/>
+                            <constraint firstItem="9Dn-f9-Lua" firstAttribute="leading" secondItem="Me7-rL-PKj" secondAttribute="leadingMargin" id="u1B-ZE-abG"/>
+                            <constraint firstItem="9Dn-f9-Lua" firstAttribute="top" secondItem="2of-Aw-zpo" secondAttribute="bottom" constant="8" symbolic="YES" id="wYH-dN-YrM"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="chatEntryText" destination="YVl-uS-IA1" id="JkW-Ti-b4S"/>
