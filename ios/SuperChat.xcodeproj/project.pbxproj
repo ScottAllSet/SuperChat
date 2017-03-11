@@ -15,6 +15,7 @@
 		D21F717B1E73319900CA5652 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D21F71791E73319900CA5652 /* LaunchScreen.storyboard */; };
 		D24EA4751E73357400E41ECC /* ChatClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24EA4741E73357400E41ECC /* ChatClient.swift */; };
 		D24EA4791E73359300E41ECC /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24EA4781E73359300E41ECC /* ChatMessage.swift */; };
+		D2A7871C1E74430A00C2BC24 /* ChatMessageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7871B1E74430A00C2BC24 /* ChatMessageStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		D21F717C1E73319900CA5652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D24EA4741E73357400E41ECC /* ChatClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatClient.swift; sourceTree = "<group>"; };
 		D24EA4781E73359300E41ECC /* ChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		D2A7871B1E74430A00C2BC24 /* ChatMessageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageStore.swift; sourceTree = "<group>"; };
 		F9833E7E2F5687A1FCB9A286 /* Pods_SuperChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB58AA94990EBD2F0773AC24 /* Pods-SuperChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperChat/Pods-SuperChat.debug.xcconfig"; sourceTree = "<group>"; };
 		FEA81D7133AD7F5E93197DE5 /* Pods-SuperChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperChat/Pods-SuperChat.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				D21F717C1E73319900CA5652 /* Info.plist */,
 				D24EA4741E73357400E41ECC /* ChatClient.swift */,
 				D24EA4781E73359300E41ECC /* ChatMessage.swift */,
+				D2A7871B1E74430A00C2BC24 /* ChatMessageStore.swift */,
 			);
 			path = SuperChat;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D21F71731E73319900CA5652 /* ChatViewController.swift in Sources */,
+				D2A7871C1E74430A00C2BC24 /* ChatMessageStore.swift in Sources */,
 				D24EA4791E73359300E41ECC /* ChatMessage.swift in Sources */,
 				D24EA4751E73357400E41ECC /* ChatClient.swift in Sources */,
 				D21F71711E73319900CA5652 /* AppDelegate.swift in Sources */,

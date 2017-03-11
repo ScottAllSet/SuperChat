@@ -15,6 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        //get the ChatViewController from the window
+        let chatViewController = window!.rootViewController as! ChatViewController
+        
+        //create and wire up the ChatMessageStore to the view controller
+        //note: in a real app I would use dependency injection to do this so it's more testable.
+        chatViewController.chatMessageStore = ChatMessageStore()
+        
         return true
     }
 
