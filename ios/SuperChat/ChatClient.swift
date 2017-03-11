@@ -8,9 +8,14 @@
 
 import Alamofire
 
+struct UserErrorInfo {
+    let message: String
+    let title: String
+}
+
 enum ChatSendMessageResult {
     case success
-    case failure
+    case failure(UserErrorInfo)
 }
 
 class ChatClient {
@@ -18,7 +23,7 @@ class ChatClient {
     
     func sendMessage(chatMessage: ChatMessage) -> ChatSendMessageResult {
         //TODO stubbed
-        return ChatSendMessageResult.success
+        return ChatSendMessageResult.failure(UserErrorInfo(message: "Bad", title: "Really Bad"))
     }
     
     func getMessages() -> [ChatMessage] {
